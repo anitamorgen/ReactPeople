@@ -44,37 +44,28 @@ class PeopleTable extends Component {
     const { people, person } = this.state;
     const { firstName, lastName, age } = this.state.person;
     return (
-        <div className="container mt-5">
-      <AddPersonForm
-        firstName={firstName}
-        lastName={lastName}
-        age={age}
-        onTextChange={this.onTextChange}
+      <div className="container mt-5">
+        <AddPersonForm
+          firstName={firstName}
+          lastName={lastName}
+          age={age}
+          onTextChange={this.onTextChange}
+          onAddClick={this.onAddClick}
         />
         <table className="table table-hover table striped table bordered">
-        <thead>
+          <thead>
             <td>first Name</td>
             <td>LastName</td>
             <td>Age</td>
-        </thead>
-        <tbody>
-        {people.map((p) => {
-                        <PersonRow
-                            onSelectClick={() => this.onSelectClick(p)}
-                            onUnselectClick={() => this.onUnselectClick(p)}
-                            person={p}
-                            isSelected={this.isSelected(p)}
-                            key={p.id} />
-                    })
-                    }
-        </tbody>
+          </thead>
+          <tbody>
+            {people.map((p) => {
+              <PersonRow person={p} key={p.id} />;
+            })}
+          </tbody>
         </table>
-      
-      
+      </div>
     );
-    </div>
-    )
-    export default PeopleTable;
+  }
 }
-
-
+export default PeopleTable;

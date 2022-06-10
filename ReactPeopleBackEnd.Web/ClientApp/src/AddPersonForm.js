@@ -1,12 +1,6 @@
 import React from "react";
 
-export default function AddPersonForm({
-  firstName,
-  lastName,
-  age,
-  onTextChange,
-  onAddClick,
-}) {
+function AddPersonForm({ firstName, lastName, age, onTextChange, onAddClick }) {
   return (
     <div className="row jumbotron">
       <div className="col-md-3">
@@ -47,3 +41,4 @@ export default function AddPersonForm({
     </div>
   );
 }
+export default AddPersonForm;

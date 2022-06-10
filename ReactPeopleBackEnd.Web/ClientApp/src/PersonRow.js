@@ -4,9 +4,9 @@ function PersonRow({ person }) {
   const { firstName, lastName, age } = person;
   return (
     <tr>
-      <td>{firstName}</td>
-      <td>{lastName}</td>
-      <td>{age}</td>
+      <th>{firstName}</th>
+      <th>{lastName}</th>
+      <th>{age}</th>
     </tr>
   );
 }
