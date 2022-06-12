@@ -28,7 +28,7 @@ namespace ReactPeopleBackEnd.Web.Controllers
             return repo.GetAll();
         }
 
-        [Route("addperson")]
+        [Route("add")]
         [HttpPost]
         public void Add(Person person)
         {

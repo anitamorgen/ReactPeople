@@ -25,6 +25,7 @@ namespace ReactPeopleBackEnd.Data
         {
             using var context = new PeopleDataContext(_connectionString);
             context.People.Add(person);
+            context.SaveChanges();
         }
     }
 }

@@ -49,14 +49,17 @@ class PeopleTable extends Component {
           firstName={firstName}
           lastName={lastName}
           age={age}
+          person={person}
           onTextChange={this.onTextChange}
           onAddClick={this.onAddClick}
         />
         <table className="table table-hover table striped table bordered">
           <thead>
-            <td>first Name</td>
-            <td>LastName</td>
-            <td>Age</td>
+            <tr>
+              <td>first Name</td>
+              <td>LastName</td>
+              <td>Age</td>
+            </tr>
           </thead>
           <tbody>
             {people.map((p) => {

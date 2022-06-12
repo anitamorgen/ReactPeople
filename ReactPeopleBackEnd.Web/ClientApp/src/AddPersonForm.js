@@ -1,6 +1,8 @@
 import React from "react";
 
-function AddPersonForm({ firstName, lastName, age, onTextChange, onAddClick }) {
+function AddPersonForm(props) {
+  const { firstName, lastName, age } = props.person;
+  const { onAddClick, onTextChange } = props;
   return (
     <div className="row jumbotron">
       <div className="col-md-3">
